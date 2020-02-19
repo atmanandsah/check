@@ -1,0 +1,115 @@
+.sticky-wrapper {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000
+}
+.navbar {
+	border-radius: 0;
+}
+.custom-navbar {
+	border: none;
+	margin-bottom: 0;
+	padding: 6px 0;
+	width: 100%;
+}
+.is-sticky .custom-navbar {
+	background: #fff;
+	-moz-box-shadow: 0 10px 33px rgba(0,0,0,.1);
+	-webkit-box-shadow: 0 10px 33px rgba(0,0,0,.1);
+	box-shadow: 0 10px 33px rgba(0,0,0,.1);
+}
+.custom-navbar .navbar-brand {
+	color: #fff;
+	font-weight: bold;
+	font-size: 32px;
+	line-height: 35px;
+}
+.custom-navbar .navbar-brand span {
+	color: #DC3D24;
+}
+.custom-navbar .nav li a {
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	line-height: 40px;
+	letter-spacing: 0.3px;
+	padding-right: 20px;
+	padding-left: 20px;
+	-webkit-transition: all ease-in-out 0.4s;
+	transition: all ease-in-out 0.4s;
+}
+.custom-navbar .nav li a:hover {
+	background: transparent;
+	color: #ffffff;
+}
+.custom-navbar .nav li .calltxt {
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	display: block;
+	margin-top: 15px;
+	border: 1px dashed #fff;
+	padding: 7px 20px;
+	-webkit-transition: all ease-in-out 0.4s;
+	transition: all ease-in-out 0.4s;
+}
+.is-sticky .custom-navbar .nav li a {
+	color: #999;
+}
+.is-sticky .custom-navbar .nav li a:hover {
+	color: #333;
+}
+.is-sticky .custom-navbar .navbar-brand {
+	color: #DC3D24;
+	line-height: 20px;
+}
+.is-sticky .custom-navbar .navbar-brand span {
+	color: #333;
+}
+.is-sticky .custom-navbar .nav li .calltxt {
+	background: #DC3D24;
+	border-color: #DC3D24;
+	margin-top: 10px;
+	color: #fff;
+}
+.custom-navbar .navbar-nav > li > a:hover, .custom-navbar .navbar-nav > li > a:focus {
+	background-color: transparent;
+}
+.custom-navbar .nav li.active > a {
+	background-color: transparent;
+	color: #DC3D24;
+}
+.custom-navbar .navbar-toggle {
+	border: none;
+	padding-top: 10px;
+}
+.custom-navbar .navbar-toggle {
+	background-color: transparent;
+}
+.custom-navbar .navbar-toggle .icon-bar {
+	background: #DC3D24;
+	border-color: transparent;
+}
+.navbar-collapse.in {
+	overflow: visible;
+	max-height: none;
+	background: #DC3D24;
+	padding: 0 30px;
+}
+.navbar-collapse.in .nav li.active a {
+	color: #000;
+}
+.is-sticky .custom-navbar .nav li a {
+	line-height: 24px;
+}
+ @media(min-width:768px) {
+.custom-navbar {
+	border-bottom: 0;
+}
+.custom-navbar.top-nav-collapse {
+	background: rgba(0,0,0,0.7);
+	padding: 6px 0;
+}
+}

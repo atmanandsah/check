@@ -35,8 +35,9 @@
                         <th id="roll">Roll No</th>
                         <th id="mobile">Mobile No</th>
                         <th id="email">Email Id</th>
+                        <th id="password">Password</th>
                         <th id="branch">Branch</th>
-                        <th id="college">College Name</th>
+                        <th id="college">College</th>
                     </tr>
 
                 </thead>
@@ -74,6 +75,14 @@
                                     <div class="col-12">
                                         <input id="emailform" type="text" class="form-control" id=""
                                             placeholder="Email Id" required>
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="form-row">
+                                    <div class="col-9">
+                                        <input id="passwordform" type="text" class="form-control" id=""
+                                            placeholder="Password" required>
                                     </div>
                                 </div>
                             </th>
@@ -134,6 +143,7 @@
 
         var name_form = document.getElementById("nameform");
         var email_form = document.getElementById("emailform");
+        var password_form = document.getElementById("passwordform");
         var roll_form = document.getElementById("rollform");
         var mobile_form = document.getElementById("mobileform");
         var branch_form = document.getElementById("branchform");
@@ -147,13 +157,14 @@
             var form_body = {
                 name: name_form.value,
                 email: email_form.value,
+                password: password_form.value,
                 roll: roll_form.value,
                 mobile: mobile_form.value,
                 branch: branch_form.value,
                 college: college_form.value
             }
             console.log("form data", form_body);
-            var url = "http://localhost:5000/create_users";
+            var url = "http://localhost:5000/api/v1/students_reg";
 
             var header_obj = {
                 method: "POST",

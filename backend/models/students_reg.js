@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+var crypto = require('crypto');
 
 var studentSchema = mongoose.Schema({
     name:{
@@ -12,11 +13,16 @@ var studentSchema = mongoose.Schema({
     },
     mobile:{
         type: String,
-        require: true
+        require: true,
+        maxlength:[10,'Phone number should not exceed than 10']
     },
     email:{
         type: String,
         require: true
+    },
+    password:{
+        type: String,
+        require : true 
     },
     branch:{
         type: String,
@@ -25,15 +31,19 @@ var studentSchema = mongoose.Schema({
     college:{
         type: String,
         require: true
+    },
+    createdAt:{
+        type:Date,
+        default:Date.now
     }
 });
 
 
-var adminModel = module.exports = mongoose.model('admin',studentSchema,"students");
+var studentModel = module.exports = mongoose.model('student',studentSchema,"students");
 
 //add entery to database
-module.exports.addAdmin = function(data){
+module.exports.addStudent = function(data){
     //adminModel.create(data,callback);
-    var admin = new adminModel(data);
-    return admin.save()
+    var student = new studentModel(data);
+    return student.save()
 }
