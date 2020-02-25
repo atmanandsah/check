@@ -1,14 +1,15 @@
+import { response } from "express";
+
 var questions = [
     {question:"What's your name?"},
     {question:"what's is your Roll no?"},
-    {question:"What's your last mobile?"},
+    {question:"What's your mobile No.?"},
     {question:"What's your email?", pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/},
-    {question:"What's your last password?"},
-    {question:"What's your last branch?"},
-    {question:"Create your college", type: "password"}
-  ]
-  
-  ;(function(){
+    {question:"What's your password?"},
+    {question:"What's your branch?"},
+    {question:"Your college name"}
+  ];
+  (function(){
   
     var tTime = 100  // transition transform time from #register in ms
     var wTime = 200  // transition width time from #register in ms
@@ -46,12 +47,35 @@ var questions = [
       
       // add the h1 at the end with the welcome text
       var h1 = document.createElement('h1')
-      h1.appendChild(document.createTextNode('Welcome ' + questions[0].value + '!'))
+      h1.appendChild(document.createTextNode( `Welcome ${questions[0].value}` ))
       setTimeout(function() {
         register.parentElement.appendChild(h1)     
         setTimeout(function() {h1.style.opacity = 1}, 50)
       }, eTime)
-      
+      console.log("submited");
+      var student_form ={
+        name : questions[0].value,
+        roll : questions[1].value,
+        mobile : questions[2].value,
+        email : questions[3].value,
+        password : questions[4].value,
+        branch : questions[5].value,
+        college : questions[6].value
+      }
+    //   console.log("form data", student_form);
+    //   var url = "http://localhost:5000/api/v1/students_reg";
+
+    //   var header_obj ={
+    //       method:"POST",
+    //       body: JSON.stringify(student_form),
+    //       headers: {
+    //           "Content-type" : "application/json"
+    //       }
+    //   }
+    //   fetch(url, header_obj)
+    //   .then((response) => response.json())
+    //   .then((data) => console.log(data))
+    //   .catch((err) => console.log(err)) 
     }
   
     // when submitting the current question
@@ -111,4 +135,8 @@ var questions = [
       setTimeout(callback,  tTime * 7)
     }
   
-  }())
+  }());
+
+  
+
+
