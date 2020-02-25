@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-var {addStudent} = require('../models/students_reg');
+var {addStudent} = require('../models/students');
 
 router.post('/',(req,res) => {
     console.log("student creation requested");
