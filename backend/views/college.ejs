@@ -1,0 +1,115 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+        <h1 class="text-center mb-3">
+          <i class="fas fa-user-plus"></i> Register As A College
+        </h1>
+        <%- include ('./partials/messages') %>
+        
+        <form action="register/college" method="POST">
+            <div class="form-group">
+                <label for="name">College Name</label>
+                <input
+                  type="name"
+                  id="name"
+                  name="name"
+                  class="form-control"
+                  placeholder="Enter Name"
+                  value="<%= typeof name != 'undefined' ? name : '' %>"
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="code">College Code</label>
+                <input
+                  type="code"
+                  id="code"
+                  name="code"
+                  class="form-control"
+                  placeholder="Enter Code"
+                  value="<%= typeof code != 'undefined' ? code : '' %>"
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input
+                  type="address"
+                  id="address"
+                  name="address"
+                  class="form-control"
+                  placeholder="Enter Address"
+                  value="<%= typeof address != 'undefined' ? address : '' %>"
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="tpo_name">TPO Name</label>
+                <input
+                  type="tpo_name"
+                  id="tpo_name"
+                  name="tpo_name"
+                  class="form-control"
+                  placeholder="Enter TPO Name"
+                  value="<%= typeof tpo_name != 'undefined' ? tpo_name : '' %>"
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="tpo_email">TPO Email</label>
+                <input
+                  type="tpo_email"
+                  id="tpo_email"
+                  name="tpo_email"
+                  class="form-control"
+                  placeholder="Enter TPO Email"
+                  value="<%= typeof tpo_email != 'undefined' ? tpo_email : '' %>"
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="password">TPO Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  class="form-control"
+                  placeholder="Create Password"
+                  value="<%= typeof password != 'undefined' ? password : '' %>"
+                />
+            </div>
+            <div class="form-group">
+                <label for="password2">Confirm Password</label>
+                <input
+                  type="password"
+                  id="password2"
+                  name="password2"
+                  class="form-control"
+                  placeholder="Confirm Password"
+                  value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+                />
+            </div>
+       
+        
+        
+
+        <div class="form-group">
+            <label for="mobile">TPO Mobile</label>
+            <input
+              type="mobile"
+              id="mobile"
+              name="mobile"
+              class="form-control"
+              placeholder="Enter mobile no"
+              value="<%= typeof mobile != 'undefined' ? mobile : '' %>"
+            />
+        </div>
+
+          <button type="submit" class="btn btn-primary btn-block">
+            Register
+          </button>
+        </form>
+        <p class="lead mt-4">Have An Account? <a href="/users/login">Login</a></p>
+      </div>
+    </div>
+  </div>

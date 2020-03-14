@@ -1,16 +1,15 @@
-var mongoose = require('mongoose');
-var schema  =mongoose.Schema;
+const mongoose = require('mongoose');
 
-var collegeSchema = mongoose.Schema({
-    college_name:{
+const CollegeSchema = new mongoose.Schema({
+    name:{
         type:String,
         require:true
     },
-    college_code:{
+    code:{
         type:String,
         require:true
     },
-    college_address:{
+    address:{
         type:String,
         require:true
     },
@@ -26,7 +25,7 @@ var collegeSchema = mongoose.Schema({
         type:String,
         require:true
     },
-    tpo_phone:{
+    tpo_mobile:{
         type:String,
         require:true
     },
@@ -36,8 +35,5 @@ var collegeSchema = mongoose.Schema({
     }
 });
 
-var collegeModel = module.exports = mongoose.model('college', collegeSchema,"colleges");
-module.exports.addCollege = (data) =>{
-    var college = new collegeModel(data);
-    return college.save();
-}
+const College = mongoose.model('College',CollegeSchema);
+module.exports = College;
